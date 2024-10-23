@@ -1,3 +1,5 @@
+package fuckcaoyixin.src;
+
 public class Player {
     private String name;
     private int position;
