@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String args[]){
-        Board.Board_Display();
         Game game = new Game();
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to Monopoly game:");
@@ -30,5 +29,9 @@ public class main {
         }
         game.showPlayers();
 
+        SwingUtilities.invokeLater(() -> {
+            Board s = new Board();
+            s.setVisible(true);
+        });
     }
 }

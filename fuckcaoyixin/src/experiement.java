@@ -1,3 +1,5 @@
+package fuckcaoyixin.src;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -90,7 +92,7 @@ class Experiment extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            Experiment game = new Experiment();
+            Board game = new Board();
             game.setVisible(true);
         });
     }
