@@ -28,10 +28,12 @@ public class main {
         }
         System.out.println(game.players.size() + " players are added");
         game.showPlayers();
-
         SwingUtilities.invokeLater(() -> {
             Board board = new Board();
             board.setVisible(true);
         });
+        if(scan.next().equalsIgnoreCase("info")){
+            game.showPlayers();
+        }
     }
 }
