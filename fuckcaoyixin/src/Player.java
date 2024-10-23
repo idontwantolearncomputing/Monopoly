@@ -1,16 +1,18 @@
 package fuckcaoyixin.src;
 
 public class Player {
+    private int playerID;
     private String name;
     private int position;
     private int money;
 
-    public Player(String name, int position, int money){
+    public Player(int playerID, String name, int position, int money){
+        this.playerID=playerID;
         this.name=name;
         this.position=position;
         this.money=money;
     }
-
+    public int getPlayerID(){return playerID;}
     public  String getName(){
         return name;
     }

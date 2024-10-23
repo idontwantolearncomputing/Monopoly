@@ -11,7 +11,7 @@ public class main {
         System.out.println("To start the game, please input your name, starting position , and starting money");
         System.out.println("you can type finish if you finish adding players");
 
-        while(true) {
+        for (int i = 1;i<=3;i++) {
             System.out.println("(no more than 3 players)");
             System.out.println("Enter player details or 'finish':");
             String input = scan.next();
@@ -21,17 +21,17 @@ public class main {
             String name = input;
             int position = scan.nextInt();
             int money = scan.nextInt();
-            game.addPlayer(name,position,money);
+            game.addPlayer(i,name,position,money);
             if(game.players.size()==3){
-                System.out.println("3 players are added");
                 break;
             }
         }
+        System.out.println(game.players.size() + " players are added");
         game.showPlayers();
 
         SwingUtilities.invokeLater(() -> {
-            Board s = new Board();
-            s.setVisible(true);
+            Board board = new Board();
+            board.setVisible(true);
         });
     }
 }

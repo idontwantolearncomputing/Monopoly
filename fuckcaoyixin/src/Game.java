@@ -10,8 +10,8 @@ public class Game {
     public Game(){
         players = new ArrayList<>();
     }
-    public void addPlayer(String name, int startingPosition, int startingMoney){
-        Player player = new Player(name, startingPosition,startingMoney);
+    public void addPlayer(int playerID ,String name, int startingPosition, int startingMoney){
+        Player player = new Player(playerID,name, startingPosition,startingMoney);
         players.add(player);
     }
     public void playRound(){
@@ -23,7 +23,8 @@ public class Game {
     }
     public void showPlayers(){
         for(Player player:players){
-            System.out.println(player.getName()+" Position: " + player.getPosition() + ", Money: " + player.getMoney());
+            System.out.println("Player "+player.getPlayerID()+": "+player.getName()+" Position: " + player.getPosition() + ", Money: " + player.getMoney());
         }
     }
+
 }

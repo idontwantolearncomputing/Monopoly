@@ -16,7 +16,6 @@ public class Board extends JFrame {
         setSize(850, 850);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
-
         initializePositions();
 
         playerIcon = new JLabel(new ImageIcon("F:\\java\\fuckcaoyixin\\chess2.jpg"));

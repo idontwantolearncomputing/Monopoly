@@ -93,6 +93,7 @@ class Experiment extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             Board game = new Board();
+
             game.setVisible(true);
         });
     }
