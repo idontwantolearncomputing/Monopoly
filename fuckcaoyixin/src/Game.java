@@ -2,6 +2,7 @@ package fuckcaoyixin.src;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -25,6 +26,13 @@ public class Game {
         for(Player player:players){
             System.out.println("Player "+player.getPlayerID()+": "+player.getName()+" Position: " + player.getPosition() + ", Money: " + player.getMoney());
         }
+    }
+
+
+    public void rollDice() {
+        Random rand = new Random();
+        int roll = rand.nextInt(6) + 1;
+        System.out.println("Rolled: " + roll);
     }
 
 }
